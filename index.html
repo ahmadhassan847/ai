@@ -38,16 +38,14 @@
             max-width: 75%;
             line-height: 1.6;
         }
-        /* دائیں طرف صارف کا میسج (RTL کے مطابق) */
         .user {
             background-color: #0056b3;
             align-self: flex-start; 
         }
-        /* بائیں طرف بوٹ کا میسج (RTL کے مطابق) */
         .bot {
             background-color: #2a2a2a;
             align-self: flex-end;
-            border-right: 4px solid #00ffcc; /* سائیڈ بار کو دائیں طرف کیا ہے */
+            border-right: 4px solid #00ffcc;
         }
         #input-container {
             display: flex;
@@ -87,12 +85,10 @@
     </div>
 
     <div id="input-container">
-        <!-- یہاں onclickpress کو بدل کر onkeydown کر دیا گیا ہے -->
         <input type="text" id="user-input" placeholder="اپنا سوال یہاں لکھیں..." onkeydown="if(event.key === 'Enter') sendMessage()">
         <button onclick="sendMessage()">بھیجیں</button>
     </div>
 
-    <!-- اسکرپٹ میپ اب صرف ایک بار یہاں رہے گا -->
     <script type="importmap">
       {
         "imports": {
