@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
 
-// آپ کی فراہم کردہ API Key یہاں لگا دی گئی ہے
-const API_KEY = "AQ.Ab8RN6Kw-qorGmOYPQo8irLZbtZ1cCo3L4P33uOToxVTUc7Cgg"; 
+// آپ کی نئی فراہم کردہ API Key یہاں لگا دی گئی ہے
+const API_KEY = "AQ.Ab8RN6JpjxRnIpz0MoC5GvAoUhcA7n7ZJU4_Eyxx5rWaZw57tw"; 
 
 window.sendMessage = async function() {
     const inputField = document.getElementById("user-input");
@@ -17,7 +17,7 @@ window.sendMessage = async function() {
     inputField.value = "";
     chatContainer.scrollTop = chatContainer.scrollHeight;
 
-    // اگر کسی وجہ سے چابی موجود نہ ہو
+    // اگر چابی موجود نہ ہو
     if (!API_KEY) {
         chatContainer.innerHTML += `<div class="message bot" style="color:red;">مارخور: API Key نہیں مل سکی۔</div>`;
         chatContainer.scrollTop = chatContainer.scrollHeight;
@@ -41,7 +41,7 @@ window.sendMessage = async function() {
 
     } catch (error) {
         console.error(error);
-        // اگر چابی غلط ہو تو یہ ایرر آئے گا
+        // اگر چابی غلط یا بلاک ہو تو یہ ایرر آئے گا
         chatContainer.innerHTML += `<div class="message bot" style="color:red;">خرابی: جیمنائی سرور سے رابطہ نہیں ہو سکا۔ (براہِ کرم چیک کریں کہ آپ کی API Key درست ہے یا نہیں)</div>`;
         chatContainer.scrollTop = chatContainer.scrollHeight;
     }
