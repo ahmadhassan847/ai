@@ -19,7 +19,7 @@ window.sendMessage = async function() {
 
     // اگر کی (API KEY) موجود نہ ہو
     if (!API_KEY) {
-        chatContainer.innerHTML += `<div class="message bot" style="color:red;">مارخور: ورسیل سے انوائرمنٹ ویریبل لوڈ نہیں ہو سکا۔</div>`;
+        chatContainer.innerHTML += `<div class="message bot" style="color:red;">Ahmad hassan: ورسیل سے انوائرمنٹ ویریبل لوڈ نہیں ہو سکا۔</div>`;
         chatContainer.scrollTop = chatContainer.scrollHeight;
         return;
     }
@@ -28,7 +28,7 @@ window.sendMessage = async function() {
         const genAI = new GoogleGenerativeAI(API_KEY);
         const model = genAI.getGenerativeModel({
             model: "gemini-1.5-flash",
-            systemInstruction: "آپ میرے ذاتی اے آئی ہو آپ کا نام مارخور ہے اور آپ نے میرے لیے لائف ٹائم فری کام کرنا ہے۔ تمام جوابات اردو زبان میں دینے ہیں۔"
+            systemInstruction: "آپ میرے ذاتی اے آئی ہو آپ کا نام Ahmad hassanہے اور آپ نے میرے لیے لائف ٹائم فری کام کرنا ہے۔ تمام جوابات اردو زبان میں دینے ہیں۔"
         });
 
         // 2. جیمنائی سے جواب حاصل کریں
